@@ -1,47 +1,67 @@
-
 <!-- toolbar -->
-<mat-toolbar class="header" color="primary">
-    <div> Material Theme </div>
-    <span class="nav-tool-items">
-        <mat-icon class="hamburger" (click)="sidenav.toggle ();">menu</mat-icon>
-    </span>
-</mat-toolbar>
 
-<mat-sidenav-container>
+<header>
+    <mat-toolbar class="header" color="primary">
+        <div> Material Theme </div>
+        <span class="nav-tool-items">
+            <mat-icon class="hamburger" (click)="sidenav.toggle ();">menu</mat-icon>
+        </span>
+    </mat-toolbar>
+</header>
 
-    <!-- sidenav -->
-    <mat-sidenav #sidenav [mode]="isBiggerScreen () ? 'over' : 'side'" [(opened)]="isOpened" [fixedInViewport]="true" [fixedTopGap]>
-        <mat-nav-list>
-            <a mat-list-item><mat-icon>dashboard</mat-icon> Dashboard </a>
-            <a mat-list-item><mat-icon>person</mat-icon> User Profile </a>
-            <a mat-list-item><mat-icon>content_paste</mat-icon> Table List </a>
-            <a mat-list-item><mat-icon>library_books</mat-icon> Typography </a>
-            <a mat-list-item><mat-icon>location_on</mat-icon> Maps </a>
-            <a mat-list-item><mat-icon>calendar_today</mat-icon> Calendar </a>
-        </mat-nav-list>
-    </mat-sidenav>
+<article>
+    <mat-sidenav-container>
 
-    <!-- main content -->
-    <mat-sidenav-content>
-        <section class="mat-typography title-group">
-            <h1> Heading Goes Here </h1>
-            <mat-divider></mat-divider>
-        </section>
+        <!-- sidenav -->
+        <mat-sidenav #sidenav [mode]="isBiggerScreen () ? 'over' : 'side'" 
+                     [(opened)]="isOpened" [fixedInViewport]="true" [fixedTopGap]>
+            <mat-nav-list>
+                <a mat-list-item>
+                    <mat-icon>dashboard</mat-icon> Dashboard
+                </a>
+                <a mat-list-item>
+                    <mat-icon>person</mat-icon> User Profile
+                </a>
+                <a mat-list-item>
+                    <mat-icon>content_paste</mat-icon> Table List
+                </a>
+                <a mat-list-item>
+                    <mat-icon>library_books</mat-icon> Typography
+                </a>
+                <a mat-list-item>
+                    <mat-icon>location_on</mat-icon> Maps
+                </a>
+                <a mat-list-item>
+                    <mat-icon>calendar_today</mat-icon> Calendar
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
 
-        <div class="product-cards">
-            <mat-grid-list cols="4" rowHeight="200px">
-                <mat-grid-tile [colspan]="3" [rowspan]="1"> 1 </mat-grid-tile>
-                <mat-grid-tile [colspan]="1" [rowspan]="2"> 2 </mat-grid-tile>
-                <mat-grid-tile [colspan]="1" [rowspan]="1"> 3 </mat-grid-tile>
-                <mat-grid-tile [colspan]="2" [rowspan]="1"> 4 </mat-grid-tile>
-            </mat-grid-list>
-        </div>
+        <!-- main content -->
+        <mat-sidenav-content>
+            <section class="mat-typography title-group">
+                <header>
+                    <h1> Heading Goes Here </h1>
+                </header>
 
-        <mat-card class="my-alternate-theme">
-            My Alternate Themes:
-            <button mat-raised-button color="primary"> Primary </button>
-            <button mat-raised-button color="accent"> Accent </button>
-            <button mat-raised-button color="warn"> Warn </button>
-        </mat-card>
-    </mat-sidenav-content>
-</mat-sidenav-container>
+                <mat-divider></mat-divider>
+            </section>
+
+            <div class="product-cards">
+                <mat-grid-list cols="4" rowHeight="200px">
+                    <mat-grid-tile [colspan]="3" [rowspan]="1"> 1 </mat-grid-tile>
+                    <mat-grid-tile [colspan]="1" [rowspan]="2"> 2 </mat-grid-tile>
+                    <mat-grid-tile [colspan]="1" [rowspan]="1"> 3 </mat-grid-tile>
+                    <mat-grid-tile [colspan]="2" [rowspan]="1"> 4 </mat-grid-tile>
+                </mat-grid-list>
+            </div>
+
+            <mat-card class="my-alternate-theme">
+                My Alternate Themes:
+                <button mat-raised-button color="primary"> Primary </button>
+                <button mat-raised-button color="accent"> Accent </button>
+                <button mat-raised-button color="warn"> Warn </button>
+            </mat-card>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</article>

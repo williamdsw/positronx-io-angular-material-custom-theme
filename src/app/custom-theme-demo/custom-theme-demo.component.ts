@@ -3,8 +3,7 @@ import { MatSidenav } from '@angular/material';
 
 @Component({
   selector: 'app-custom-theme-demo',
-  templateUrl: './custom-theme-demo.component.html',
-  styleUrls: ['./custom-theme-demo.component.scss']
+  templateUrl: './custom-theme-demo.component.html'
 })
 export class CustomThemeDemoComponent implements OnInit {
 
